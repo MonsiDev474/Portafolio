@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Manuel Monsalve's portafolio">
+    <meta name="keywords" content="portafolio, desarrollador web, programador, proyectos, contacto">
+    <meta name="author" content="Manuel Monsalve">
+    
+    <title>Portafolio Web</title>
+
+    <!-- Our main stylesheet -->
+    <link rel="stylesheet" href="src/css/style.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Doppio+One&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    
+    <script>
+        // Load lang to avoid gibberish
+        const savedLanguage = localStorage.getItem("language");
+
+        if (savedLanguage === "en" || savedLanguage === "es") {
+            document.documentElement.lang = savedLanguage;
+        } else {
+            document.documentElement.lang = navigator.language.startsWith("es") ? "es" : "en";
+        }
+        // Load theme to avoid flashbang
+        const savedTheme = localStorage.getItem("theme");
+
+        if (savedTheme) {
+            document.documentElement.dataset.theme = savedTheme;
+        } else {
+            const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+            document.documentElement.dataset.theme =
+            systemPrefersDark ? "dark" : "light";
+        }
+    </script>
+</head>
+<body>
+    
+    <header>
+        <img src="src/assets/nan.png" alt="logo">
+        <div class="my-identity">
+            <h1>Alejandro Manuel Monsalve</h1>
+            <p data-i18n="head.profession">Programming Technician</p>
+        </div>
+        
+        
+        <div class="ham-menu-container">
+            <nav>
+                <a href="#about" data-i18n="nav.about">About me</a>
+                <a href="#projects" data-i18n="nav.projects">Projects</a>
+                <a href="#experience" data-i18n="nav.experience">Experience</a>
+                <a href="#contact" data-i18n="nav.contact">Contact</a>
+            </nav>
+    
+            <!-- borger -->
+            <button type="button" 
+                    id="menu-toggle" 
+                    aria-label="Open navigation menu" 
+                    aria-expanded="false">
+                ☰
+            </button>
+        </div>
+        
+        <div class="acc-menu-container">
+            <!-- Theme button -->
+            <button type="button" id="theme-toggle" aria-label="Toggle theme">
+                <span class="toggle-track">
+                    <span class="toggle-thumb">
+                        <span class="thumb-icon"></span>
+                    </span>
+                </span>
+            </button>
+            <!-- Language button -->
+            <button type="button" id="language-toggle" aria-label="Change language">
+                🌎EN
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2 data-i18n="nav.about">About me</h2>
+        </section>
+
+        <section id="projects">
+            <h2 data-i18n="nav.projects">Projects</h2>
+        </section>
+
+        <section id="experience">
+            <h2 data-i18n="nav.experience">Experience</h2>
+        </section>
+
+        <section id="contact">
+            <h2 data-i18n="nav.contact">Contact</h2>
+        </section>
+    </main>
+
+
+    <script src="src/js/app.js"></script>
+</body>
+</html>
