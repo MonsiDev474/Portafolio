@@ -30,6 +30,13 @@ const translations = {
 			experience: "Experience",
 			contact: "Contact",
 		},
+		main: {
+			about: `<div class='about-intro-text'>A curious guy who really gets into it once he gets a grasp of whatever he's doing</div>
+			\nHi, I'm Manu. Programming technician who really likes python and would rather avoid java like the plague. Jokes\
+			aside though, I like coding in projects of any size and especially seeing the results: a nice, working and efficient program\
+			that does what it's supposed to do. I <i>am</i> a bit shy tho, you have to get me out of my shell most of the time, but once I've warmed up to everybody things usually go smoothly.
+			\nMy favourite pastimes are listening to music (mostly game OSTs, EDM and nu metal), playing and modding games (mostly PAYDAY 2 and Source games), reading manga or rewatching old movies that I'd religiously watch as a kid.`
+		}
 	},
 
 	es: {
@@ -42,6 +49,9 @@ const translations = {
 			experience: "Experiencia",
 			contact: "Contacto",
 		},
+		main: {
+			about: "Placeholder",
+		}
 	},
 };
 
@@ -60,11 +70,13 @@ function setLanguage(language) {
 		const translation = getTranslation(key, language);
 
 		if (translation) {
-			element.textContent = translation;
+			// element.textContent = translation;
+			element.innerHTML = translation;
 		}
 	});
 
-	languageToggle.textContent = language === "en" ? "🌎EN" : "🌎ES";
+	// languageToggle.textContent = language === "en" ? "🌎EN" : "🌎ES";
+	languageToggle.innerHTML = language === "en" ? "🌎EN" : "🌎ES";
 }
 
 const languageToggle = document.querySelector("#language-toggle");
@@ -91,3 +103,14 @@ menuToggle.addEventListener("click", () => {
     isOpen ? "Close navigation menu" : "Open navigation menu"
   );
 });
+
+function resetMenuOnSmallMobile() {
+    if (window.innerWidth <= 616) {
+        nav.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+    }
+}
+
+window.addEventListener("resize", resetMenuOnSmallMobile);
+resetMenuOnSmallMobile();

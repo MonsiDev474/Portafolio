@@ -30,6 +30,7 @@
         } else {
             document.documentElement.lang = navigator.language.startsWith("es") ? "es" : "en";
         }
+
         // Load theme to avoid flashbang
         const savedTheme = localStorage.getItem("theme");
 
@@ -88,18 +89,58 @@
     <main>
         <section id="about">
             <h2 data-i18n="nav.about">About me</h2>
+
+            <div class="section-content">
+                <article>
+                    <p data-i18n="main.about"></p>
+                </article>
+
+                <div class="section-image">
+                    <img src="src/assets/about.jpg" alt="About me illustration">
+                </div>
+            </div>
         </section>
 
         <section id="projects">
             <h2 data-i18n="nav.projects">Projects</h2>
+
+            <div class="section-content">
+                <article>
+                    <p data-i18n="main.projects"></p>
+                </article>
+
+                <div class="section-image">
+                    <img src="src/assets/projects.png" alt="Projects illustration">
+                </div>
+            </div>
         </section>
 
         <section id="experience">
             <h2 data-i18n="nav.experience">Experience</h2>
+
+            <div class="section-content">
+                <article>
+                    <p data-i18n="main.experience"></p>
+                </article>
+
+                <div class="section-image">
+                    <img src="src/assets/experience.png" alt="Experience illustration">
+                </div>
+            </div>
         </section>
 
         <section id="contact">
             <h2 data-i18n="nav.contact">Contact</h2>
+
+            <div class="section-content">
+                <article>
+                    <p data-i18n="main.contact"></p>
+                </article>
+
+                <div class="section-image">
+                    <img src="src/assets/contact.png" alt="Contact illustration">
+                </div>
+            </div>
         </section>
     </main>
 
