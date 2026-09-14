@@ -46,46 +46,56 @@
 <body>
     
     <header>
-        <img src="src/assets/nan.png" alt="logo">
-        <div class="my-identity">
-            <h1>Alejandro Manuel Monsalve</h1>
-            <p data-i18n="head.profession">Programming Technician</p>
+        <div class="logo-identity">
+            <img src="src/assets/nan.png" alt="logo">
+            <div class="logo-identity-title">
+                <h1>Alejandro Manuel Monsalve</h1>
+                <p data-i18n="head.profession">Programming Technician</p>
+            </div>
         </div>
-        
-        
-        <div class="ham-menu-container">
-            <nav>
-                <a href="#about" data-i18n="nav.about">About me</a>
-                <a href="#projects" data-i18n="nav.projects">Projects</a>
-                <a href="#experience" data-i18n="nav.experience">Experience</a>
-                <a href="#contact" data-i18n="nav.contact">Contact</a>
-            </nav>
-    
-            <!-- borger -->
-            <button type="button" 
-                    id="menu-toggle" 
-                    aria-label="Open navigation menu" 
-                    aria-expanded="false">
-                ☰
-            </button>
-        </div>
-        
-        <div class="acc-menu-container">
-            <!-- Theme button -->
-            <button type="button" id="theme-toggle" aria-label="Toggle theme">
-                <span class="toggle-track">
-                    <span class="toggle-thumb">
-                        <span class="thumb-icon"></span>
-                    </span>
-                </span>
-            </button>
-            <!-- Language button -->
-            <button type="button" id="language-toggle" aria-label="Change language">
-                🌎EN
-            </button>
-        </div>
+        <nav>
+            <div class="nav-collapsibles">
+                <div class="nav-anchors">
+                    <a href="#about" data-i18n="nav.about">About me</a>
+                    <a href="#projects" data-i18n="nav.projects">Projects</a>
+                    <a href="#experience" data-i18n="nav.experience">Experience</a>
+                    <a href="#contact" data-i18n="nav.contact">Contact</a>
+                </div>
+                <div class="nav-acc-buttons">
+                    <!-- Theme button -->
+                    <button type="button" id="theme-toggle" aria-label="Toggle theme">
+                        <span class="toggle-track">
+                            <span class="toggle-thumb">
+                                <span class="thumb-icon"></span>
+                            </span>
+                        </span>
+                    </button>
+                    <!-- Language button -->
+                    <button type="button" id="language-toggle" aria-label="Change language">
+                        🌎EN
+                    </button>
+                </div>
+            </div>
+            <div class="nav-burger">
+                <!-- borger -->
+                <button type="button" 
+                        id="burger-menu-toggle" 
+                        aria-label="Open navigation menu" 
+                        aria-expanded="false">
+                    <svg 
+                        class="burger-icon" 
+                        viewBox="0 0 24 24" 
+                        width="22" 
+                        height="22" 
+                        aria-hidden="true">
+                        <line class="line top" x1="3" y1="6" x2="21" y2="6" />
+                        <line class="line middle" x1="3" y1="12" x2="21" y2="12" />
+                        <line class="line bottom" x1="3" y1="18" x2="21" y2="18" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
     </header>
-
     <main>
         <section id="about">
             <h2 data-i18n="nav.about">About me</h2>
@@ -96,7 +106,7 @@
                 </article>
 
                 <div class="section-image">
-                    <img src="src/assets/about.jpg" alt="About me illustration">
+                    <img src="src/assets/about.jpg" alt="About me sample">
                 </div>
             </div>
         </section>
@@ -110,7 +120,7 @@
                 </article>
 
                 <div class="section-image">
-                    <img src="src/assets/projects.png" alt="Projects illustration">
+                    <img src="src/assets/projects.png" alt="Projects sample">
                 </div>
             </div>
         </section>
@@ -124,7 +134,7 @@
                 </article>
 
                 <div class="section-image">
-                    <img src="src/assets/experience.png" alt="Experience illustration">
+                    <img src="src/assets/experience.png" alt="Experience sample">
                 </div>
             </div>
         </section>
@@ -138,7 +148,7 @@
                 </article>
 
                 <div class="section-image">
-                    <img src="src/assets/contact.png" alt="Contact illustration">
+                    <img src="src/assets/contact.png" alt="Contact sample">
                 </div>
             </div>
         </section>
