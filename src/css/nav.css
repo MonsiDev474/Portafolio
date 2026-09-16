@@ -1,0 +1,99 @@
+nav {
+	display: flex;
+}
+
+.nav-collapsibles {
+	display: flex;
+	gap: 1.5vw;
+	align-items: center;
+}
+
+.nav-anchors {
+	display: flex;
+	gap: 2rem;
+}
+
+.nav-anchors a {
+	white-space: nowrap;
+
+	font-family: "Share Tech Mono", monospace;
+	color: var(--text-color);
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 1.3rem;
+	transition: color 0.4s ease,
+		text-shadow 0.3s ease;
+}
+
+.nav-anchors a:hover {
+	text-shadow: 0 0 14px var(--nav-a-shadow-color);
+	transform: scale(1.1);
+}
+
+.nav-acc-buttons {
+	display: flex;
+	gap: 1vw;
+}
+
+.nav-burger {
+	display: flex;
+}
+
+@media (max-width: 1100px) {
+	.nav-anchors {
+		display: grid;
+		grid-template-columns: repeat(2, auto);
+		column-gap: 2rem;
+		row-gap: 0.5rem;
+		text-align: center;
+		font-size: 1rem;
+	}
+}
+
+@media (max-width: 850px) {
+    .nav-anchors {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.nav-acc-buttons {
+		justify-content: space-around;
+	}
+
+	.nav-collapsibles {
+		display: none;
+	}
+
+	.nav-collapsibles.open {
+		display: grid;
+		position: absolute;
+		top: 5.5rem;
+		right: 1rem;
+		/* transform: translateX(69%); */
+
+		grid-template-columns: 1fr;
+		gap: 1rem;
+
+		padding: 0.75rem;
+		border-radius: 10px;
+		border: 1px solid var(--header-border-color);
+		background: var(--bg-color);
+		box-shadow: 0 4px 10px var(--main-box-shadow-color);
+	}
+}
+
+@media (max-width: 550px) { 
+    .nav-burger {
+		border: none;
+		padding: 0px;
+	}
+
+	.nav-collapsibles.open {
+		position: fixed;
+		top: unset;
+		right: 1.25rem;
+		bottom: 6rem;
+		z-index: 1000;
+	}
+}

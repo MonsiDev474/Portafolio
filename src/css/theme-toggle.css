@@ -1,0 +1,56 @@
+#theme-toggle {
+	cursor: pointer;
+	border: none;
+	padding: 0;
+
+	background: none;
+	color: var(--text);
+	transition: opacity 0.3s ease;
+}
+
+#theme-toggle:active {
+	transform: scale(0.9);
+}
+
+#theme-toggle:hover {
+	opacity: 0.8;
+}
+
+.toggle-track {
+	position: relative;
+	display: flex;
+
+	width: 45px;
+	height: 25px;
+
+	border-radius: 999px;
+	background: var(--surface);
+}
+
+.toggle-thumb {
+	display: flex;
+	position: absolute;
+
+	width: 25px;
+	height: 25px;
+
+	border-radius: 50%;
+	background: var(--toggle-thumb-color);
+
+	transition: left 0.3s ease;
+}
+
+.thumb-icon {
+	display: flex;
+	margin-inline: auto;
+	margin-top: -1.5px;
+	font-size: 20px;
+}
+
+[data-theme="light"] .toggle-thumb {
+	left: 20px;
+}
+
+[data-theme="dark"] .toggle-thumb {
+	left: 0px;
+}

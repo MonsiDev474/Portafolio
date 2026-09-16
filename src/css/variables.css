@@ -1,0 +1,36 @@
+:root {
+	--card-bg: #f0f0f0;
+	--bg-color: #ffffff;
+	--text-color: #111111;
+	--surface: #c3c3c3;
+	--toggle-thumb-color: #ffe600db;
+	--main-box-shadow-color: #ffbc70a9;
+	--header-border-color: #ff8800;
+	--pattern-color: #ffae51;
+	--nav-a-shadow-color: rgba(252, 252, 252, 0.351);
+	--testcolor: rgb(144, 80, 144);
+	--body-gradient: radial-gradient(var(--pattern-color) 0px, transparent 3px);
+	--body-bgimage-size: 24px 24px;
+}
+
+[data-theme="dark"] {
+	--card-bg: #2a2a2a;
+	--bg-color: #1e1d1d;
+	--text-color: #ffffff;
+	--surface: #3f3f3f;
+	--toggle-thumb-color: #3c2fcf;
+	--main-box-shadow-color: #38a22aa9;
+	--header-border-color: #38a22a;
+	--pattern-color: #128300;
+	--nav-a-shadow-color: rgba(252, 252, 252, 0.351);
+	--testcolor: violet;
+	--body-gradient: linear-gradient(to right, rgb(from var(--pattern-color) r g b / 0.25) 1px, transparent 7px),
+		linear-gradient(to right, rgb(from var(--pattern-color) r g b / 0.25) 0px, transparent 7px),
+		linear-gradient(to left, rgb(from var(--pattern-color) r g b / 0.25) 1px, transparent 7px),
+		linear-gradient(to bottom, rgb(from var(--pattern-color) r g b / 0.25) 1px, transparent 1px),
+		linear-gradient(to bottom, rgb(from var(--pattern-color) r g b / 0.25) 0px, transparent 1px),
+		linear-gradient(to top, rgb(from var(--pattern-color) r g b / 0.25) 1px, transparent 1px),
+		linear-gradient(to top, rgb(from var(--pattern-color) r g b / 0.25) 0px, transparent 1px);
+	--body-bgimage-size: 64px 64px;
+
+}

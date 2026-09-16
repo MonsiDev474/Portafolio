@@ -1,0 +1,33 @@
+/* ---------------------- Animated grid experiment (quite taxing on gpu with 79% use reported on a pentium's IG) ---------------------- */
+
+/* Div should be at the top of body */
+/* <body>
+    <!-- Animated grid background (requires experimental.css) -->
+    <div class="bg-grid-sweep" aria-hidden="true"></div>
+    <header> */
+
+.bg-grid-sweep {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.25;
+
+  background-image: 
+    repeating-linear-gradient(to right, var(--pattern-color) 0 1px, transparent 1px 60px),
+    repeating-linear-gradient(to bottom, var(--header-border-color) 0 1px, transparent 1px 60px);
+
+  animation: sweepGrid 8s linear infinite;
+}
+
+@keyframes sweepGrid {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    background-position: 0 0, 60px 60px;
+  }
+}

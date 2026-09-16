@@ -1,0 +1,6 @@
+.about-intro-text {
+	font-size: clamp(14px, 1.8vw, 15px);
+	font-style: italic;
+	opacity: 0.8;
+	text-align: center;
+}
