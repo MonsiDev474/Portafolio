@@ -1,0 +1,14 @@
+{
+    "head": {
+        "profession": "Técnico en Programación"
+    },
+    "nav": {
+        "about": "Sobre mí",
+        "projects": "Proyectos",
+        "experience": "Experiencia",
+        "contact": "Contacto"
+    },
+    "main": {
+        "about": "Placeholder"
+    }
+}

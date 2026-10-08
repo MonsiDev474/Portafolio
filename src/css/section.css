@@ -1,9 +1,11 @@
 
 section h2 {
 	text-align: center;
+	font-family: "Montserrat", sans-serif;
 }
 
 section p {
+	font-family: "Roboto Slab", serif;
 	font-size: clamp(16px, 2.8vw, 19.5px);
 	white-space: pre-line;
 }

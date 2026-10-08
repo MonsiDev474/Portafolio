@@ -1,3 +1,5 @@
+<!-- biome-ignore-all lint/a11y/useAnchorContent: flashing text otherwise -->
+<!-- biome-ignore-all lint/a11y/useHeadingContent: again flashing text otherwise -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,11 +14,35 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Doppio+One&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Doppio+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script>
+        // Load theme to avoid flashbang
+        let savedTheme = null;
+        try {
+        savedTheme = localStorage.getItem("theme");
+        } catch (_e) {
+            console.warn("Failed to retrieve theme from local storage")
+        }
+
+        if (savedTheme) {
+            document.documentElement.dataset.theme = savedTheme;
+        } else {
+            const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+            document.documentElement.dataset.theme =
+            systemPrefersDark ? "dark" : "light";
+        }
+
+        // Load saved lang if any
+        const savedLanguage = localStorage.getItem("language");
+
+        if (savedLanguage === "en" || savedLanguage === "es") {
+            document.documentElement.lang = savedLanguage;
+        } else {
+            document.documentElement.lang = navigator.language.startsWith("es") ? "es" : "en";
+        }
+    </script>
 
     <!-- Stylesheets (order matters!) -->
     <link rel="stylesheet" href="src/css/variables.css">
@@ -28,28 +54,6 @@
     <link rel="stylesheet" href="src/css/burger.css">
     <link rel="stylesheet" href="src/css/section.css">
     <link rel="stylesheet" href="src/css/section-about.css">
-    
-    <script>
-        // Load lang to avoid gibberish
-        const savedLanguage = localStorage.getItem("language");
-
-        if (savedLanguage === "en" || savedLanguage === "es") {
-            document.documentElement.lang = savedLanguage;
-        } else {
-            document.documentElement.lang = navigator.language.startsWith("es") ? "es" : "en";
-        }
-
-        // Load theme to avoid flashbang
-        const savedTheme = localStorage.getItem("theme");
-
-        if (savedTheme) {
-            document.documentElement.dataset.theme = savedTheme;
-        } else {
-            const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-            document.documentElement.dataset.theme =
-            systemPrefersDark ? "dark" : "light";
-        }
-    </script>
 </head>
 <body>
     <header>
@@ -63,10 +67,10 @@
         <nav>
             <div class="nav-collapsibles">
                 <div class="nav-anchors">
-                    <a href="#about" data-i18n="nav.about">About me</a>
-                    <a href="#projects" data-i18n="nav.projects">Projects</a>
-                    <a href="#experience" data-i18n="nav.experience">Experience</a>
-                    <a href="#contact" data-i18n="nav.contact">Contact</a>
+                    <a href="#about" data-i18n="nav.about"></a>
+                    <a href="#projects" data-i18n="nav.projects"></a>
+                    <a href="#experience" data-i18n="nav.experience"></a>
+                    <a href="#contact" data-i18n="nav.contact"></a>
                 </div>
                 <div class="nav-acc-buttons">
                     <!-- Theme button -->
@@ -78,9 +82,7 @@
                         </span>
                     </button>
                     <!-- Language button -->
-                    <button type="button" id="language-toggle" aria-label="Change language">
-                        🌎EN
-                    </button>
+                    <button type="button" id="language-toggle" aria-label="Change language"></button>
                 </div>
             </div>
             <div class="nav-burger">
@@ -105,11 +107,11 @@
     </header>
     <main>
         <section id="about">
-            <h2 data-i18n="nav.about">About me</h2>
+            <h2 data-i18n="nav.about"></h2>
 
             <div class="section-content">
                 <article>
-                    <p data-i18n="main.about"></p>
+                    <p data-i18n="main.about" data-i18n-html></p>
                 </article>
 
                 <div class="section-image">
@@ -119,7 +121,7 @@
         </section>
 
         <section id="projects">
-            <h2 data-i18n="nav.projects">Projects</h2>
+            <h2 data-i18n="nav.projects"></h2>
 
             <div class="section-content">
                 <article>
@@ -127,13 +129,13 @@
                 </article>
 
                 <div class="section-image">
-                    <img src="src/assets/projects.png" alt="Project A">
+                    <!-- <img src="src/assets/projects.png" alt="Project A"> -->
                 </div>
             </div>
         </section>
 
         <section id="experience">
-            <h2 data-i18n="nav.experience">Experience</h2>
+            <h2 data-i18n="nav.experience"></h2>
 
             <div class="section-content">
                 <article>
@@ -141,13 +143,13 @@
                 </article>
 
                 <div class="section-image">
-                    <img src="src/assets/experience.png" alt="">
+                    <!-- <img src="src/assets/experience.png" alt=""> -->
                 </div>
             </div>
         </section>
 
         <section id="contact">
-            <h2 data-i18n="nav.contact">Contact</h2>
+            <h2 data-i18n="nav.contact"></h2>
 
             <div class="section-content">
                 <article>
@@ -155,13 +157,14 @@
                 </article>
 
                 <div class="section-image">
-                    <img src="src/assets/contact.png" alt="">
+                    <!-- <img src="src/assets/contact.png" alt=""> -->
                 </div>
             </div>
         </section>
     </main>
 
-
+    <script src="src/js/theme-toggle.js"></script>
+    <script src="src/js/lang.js"></script>
     <script src="src/js/app.js"></script>
 </body>
 </html>
