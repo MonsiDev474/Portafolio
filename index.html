@@ -14,7 +14,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Doppio+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Doppio+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 
     <!-- Scripts -->
     <script>
@@ -47,6 +47,7 @@
     <!-- Stylesheets (order matters!) -->
     <link rel="stylesheet" href="src/css/variables.css">
     <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/background.css">
     <link rel="stylesheet" href="src/css/identity.css">
     <link rel="stylesheet" href="src/css/nav.css">
     <link rel="stylesheet" href="src/css/theme-toggle.css">
@@ -54,8 +55,11 @@
     <link rel="stylesheet" href="src/css/burger.css">
     <link rel="stylesheet" href="src/css/section.css">
     <link rel="stylesheet" href="src/css/section-about.css">
+    <link rel="stylesheet" href="src/css/section-project.css">
+    <link rel="stylesheet" href="src/css/section-experience.css">
 </head>
 <body>
+    <div class="bg-gradient-container"></div>
     <header>
         <div class="logo-identity">
             <img src="src/assets/nan.png" alt="Logo">
@@ -113,10 +117,7 @@
                 <article>
                     <p data-i18n="main.about" data-i18n-html></p>
                 </article>
-
-                <div class="section-image">
-                    <img src="src/assets/about.jpg" alt="Profile">
-                </div>
+                <img src="src/assets/about_lq.png" alt="Profile">
             </div>
         </section>
 
@@ -124,13 +125,20 @@
             <h2 data-i18n="nav.projects"></h2>
 
             <div class="section-content">
-                <article>
-                    <p data-i18n="main.projects"></p>
-                </article>
-
-                <div class="section-image">
-                    <!-- <img src="src/assets/projects.png" alt="Project A"> -->
+                <div class="section-grid">
+                    <article class="project-article">
+                        <img src="src/assets/console.png" alt="Project Skyfall">
+                        <p data-i18n="main.projects.skyfall" data-i18n-html></p>
+                    </article>
+                    <article class="project-article">
+                        <img src="src/assets/webportfolio.png" alt="Web portfolio">
+                        <p data-i18n="main.projects.webportfolio" data-i18n-html></p>
+                    </article>
                 </div>
+                <article class="project-article">
+                    <img id="projects-coming-soon" src="src/assets/questionmark.png" alt="Coming soon">
+                    <p id="coming-soon-desc" data-i18n="main.projects.comingsoon" data-i18n-html=""></p>
+                </article>
             </div>
         </section>
 
@@ -138,13 +146,14 @@
             <h2 data-i18n="nav.experience"></h2>
 
             <div class="section-content">
-                <article>
-                    <p data-i18n="main.experience"></p>
+                <article class="experience-article">
+                    <img src="src/assets/ifd6.png" alt="High school">
+                    <p data-i18n="main.experience.highschool" data-i18n-html></p>
                 </article>
-
-                <div class="section-image">
-                    <!-- <img src="src/assets/experience.png" alt=""> -->
-                </div>
+                <article class="experience-article">
+                    <img src="src/assets/unimendoza.png" alt="High school">
+                    <p data-i18n="main.experience.unimendoza" data-i18n-html></p>
+                </article>
             </div>
         </section>
 
@@ -165,6 +174,6 @@
 
     <script src="src/js/theme-toggle.js"></script>
     <script src="src/js/lang.js"></script>
-    <script src="src/js/app.js"></script>
+    <script src="src/js/burger-menu.js"></script>
 </body>
 </html>

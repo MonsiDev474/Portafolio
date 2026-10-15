@@ -1,7 +1,8 @@
 /* BASE */
-/* Contains properties applied directly to the tags */
+/* Contains properties applied directly to the main tags */
 
 body {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	margin: 0px;
@@ -10,9 +11,7 @@ body {
 	align-items: center;
 
 	font-family: system-ui, sans-serif;
-	background-image: var(--body-gradient);
-	background-size: var(--body-bgimage-size);
-	background-attachment: fixed;
+	
 	background-color: var(--bg-color);
 	color: var(--text-color);
 	transition:
@@ -64,4 +63,5 @@ main {
 		padding: clamp(1.5rem, calc(30vw - 7.5rem), 2.5rem);
 	}
 }
+
 

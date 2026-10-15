@@ -1,7 +1,38 @@
 .about-intro-text {
-	font-size: clamp(14px, 1.8vw, 15px);
+	font-size: clamp(0.7rem, calc(100% - 0.2rem), 0.8rem);
 	font-style: italic;
 	opacity: 0.8;
 	text-align: center;
 	margin-bottom: 1.5rem;
+}
+
+#about .section-content {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	gap: 3rem;
+}
+
+#about img {
+	width: clamp(256px, calc(100% - 4rem), 384px);
+	height: auto;
+	border-radius: 474px;
+	justify-self: center;
+	filter: drop-shadow(0 0 9px var(--header-border-color));
+}
+
+@media (max-width: 1024px) {
+	#about .section-content {
+		grid-template-columns: 1fr;
+		gap: 0rem;
+	}
+
+	#about img {
+		order: -1;
+		width: clamp(192px, 48%, 256px);
+	}
+	
+	#about p {
+		text-align: justify;
+	}
 }

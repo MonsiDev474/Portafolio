@@ -6,6 +6,7 @@ nav {
 	display: flex;
 	gap: 1.5vw;
 	align-items: center;
+	justify-items: center;
 }
 
 .nav-anchors {
@@ -20,7 +21,7 @@ nav {
 	color: var(--text-color);
 	text-decoration: none;
 	font-weight: bold;
-	font-size: 1.3rem;
+	font-size: 1.1rem;
 	transition: color 0.4s ease,
 		text-shadow 0.3s ease;
 }

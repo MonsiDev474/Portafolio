@@ -1,0 +1,47 @@
+.bg-gradient-container {
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+	pointer-events: none;
+    overflow: hidden;
+}
+
+.bg-gradient-container::before,
+.bg-gradient-container::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	transition: opacity 0.55s ease-in-out;
+}
+
+.bg-gradient-container::before {
+    background-image: radial-gradient(var(--pattern-color) 0px, transparent 3px);
+	background-size: 28px 28px;
+	opacity: 1;
+}
+
+.bg-gradient-container::after {
+    background-image: linear-gradient(to right, rgb(from var(--pattern-color) r g b / 0.25) 1px, transparent 7px),
+		linear-gradient(to right, rgb(from var(--pattern-color) r g b / 0.25) 0px, transparent 7px),
+		linear-gradient(to left, rgb(from var(--pattern-color) r g b / 0.25) 1px, transparent 7px),
+		linear-gradient(to bottom, rgb(from var(--pattern-color) r g b / 0.25) 1px, transparent 1px),
+		linear-gradient(to bottom, rgb(from var(--pattern-color) r g b / 0.25) 0px, transparent 1px),
+		linear-gradient(to top, rgb(from var(--pattern-color) r g b / 0.25) 1px, transparent 1px),
+		linear-gradient(to top, rgb(from var(--pattern-color) r g b / 0.25) 0px, transparent 1px);;
+	background-size: 64px 64px;
+	opacity: 0;
+}
+
+[data-theme="light"] .bg-gradient-container::before {
+  opacity: 1;
+}
+[data-theme="light"] .bg-gradient-container::after {
+  opacity: 0;
+}
+
+[data-theme="dark"] .bg-gradient-container::before {
+  opacity: 0;
+}
+[data-theme="dark"] .bg-gradient-container::after {
+  opacity: 1;
+}

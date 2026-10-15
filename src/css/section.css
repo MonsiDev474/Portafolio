@@ -1,52 +1,33 @@
-
 section h2 {
 	text-align: center;
+	font-size: 1.6rem;
 	font-family: "Montserrat", sans-serif;
+	text-shadow:
+	0 0 5px var(--nav-a-shadow-color),
+	0 0 18px var(--nav-a-shadow-color);
+	/* animation: glowPulse 2s ease-in-out infinite alternate; */
 }
+
+/* Cool pulse effect but quite expensive (30% on Intel 600) */
+/* @keyframes glowPulse {
+	0% {
+		text-shadow:
+			0 0 3px var(--nav-a-shadow-color),
+			0 0 6px var(--nav-a-shadow-color);
+	}
+	100% {
+		text-shadow:
+			0 0 7px var(--nav-a-shadow-color),
+			0 0 22px var(--nav-a-shadow-color);
+	}
+} */
 
 section p {
 	font-family: "Roboto Slab", serif;
-	font-size: clamp(16px, 2.8vw, 19.5px);
+	font-size: clamp(0.9rem, 2.8vw, 1rem);
 	white-space: pre-line;
-}
-
-.section-content {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	align-items: center;
-	gap: 3rem;
 }
 
 .section-content article {
 	line-height: 1.45;
-}
-
-.section-image {
-	display: flex;
-	justify-content: center;
-}
-
-.section-image img {
-	width: clamp(300px, 95%, 400px);
-	height: auto;
-	border-radius: 474px;
-}
-
-@media (max-width: 768px) {
-	.section-content {
-		grid-template-columns: 1fr;
-		gap: 0rem;
-	}
-
-	.section-image {
-		order: -1;
-	}
-
-	.section-image img {
-		width: clamp(200px, 50%, 300px);
-	}
-
-	section p {
-		text-align: justify;
-	}
 }
