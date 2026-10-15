@@ -25,8 +25,8 @@
 }
 
 #projects img {
-	height: 192px;
-	width: 192px;
+	height: 147px;
+	width: 147px;
 }
 
 #projects p {
@@ -58,11 +58,6 @@
 	#projects .section-grid {
 		grid-template-columns: 1fr;
 		gap: 2rem;
-	}
-
-	#projects img {
-		height: clamp(163px, calc(28vw - 0.7rem), 192px);
-		width: clamp(163px, calc(28vw - 0.7rem), 192px);
 	}
 
 	#coming-soon-desc {
