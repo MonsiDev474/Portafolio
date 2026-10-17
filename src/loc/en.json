@@ -5,7 +5,7 @@
     "nav": {
         "about": "About me",
         "projects": "Projects",
-        "experience": "Experience",
+        "education": "Education",
         "contact": "Contact"
     },
     "main": {
@@ -15,10 +15,10 @@
             "webportfolio": "<div class='project-title'>WEB PORTFOLIO</div>You are here! A simple overview of myself and my skills. Fell victim to the refactoring trap, especially when I was doing an \"art pass\"",
             "comingsoon": "<div class='project-title'>COMING SOON...</div>Currently working on some stuff for my technical degree, will update with more projects as me and my team finish new assignments"
         },
-        "experience" : {
-            "highschool": "<div class='experience-title'>I.F.D. N°6 — High School (Finished)</div>This is where we learned the basics of web making. We looked at tags, index and css stylesheets but no Javascript. We also looked at Access and went over a few concepts like tables, rows, columns and primary keys",
-            "unimendoza": "<div class='experience-title'>Universidad de Mendoza — Informatics Engineering (Abandoned)</div>Here's where I learned pretty much all that I know. We saw everything from simple Scratch games to OOP and Web design. The four pillars, variables, containers, functions, classes, methods, attributes, etc. Though I only made it to third year, where I started making my first website with React, me and a friend made a CLI RPG as a final project where I got face to face with Python and actually experienced what it's like sitting for hours just making logic for additional functionalities.",
-            "utnsanrafa": "<div class='experience-title'>Universidad Tecnológica Nacional — University Technical Degree in Programming (Ongoing)</div>Currently on first year practicing Python, Java and Javascript as well as making this web portfolio. At the end of each semester we do a final project involving everything we learned up until that point. We've also gone over everything previously mentioned (concepts and exercises), so I was able to get back in the saddle pretty quickly."
+        "education" : {
+            "highschool": "<div class='education-title'>I.F.D. N°6 — High School (Finished)</div>This is where we learned the basics of web development. We looked at tags, index and css stylesheets but no Javascript. We also looked at Access and went over a few concepts like tables, rows, columns and primary keys",
+            "unimendoza": "<div class='education-title'>Universidad de Mendoza — Informatics Engineering (Abandoned)</div>Here's where I learned pretty much all that I know. We saw everything from simple Scratch games to OOP and Web design. The four pillars, variables, containers, functions, classes, methods, attributes, etc. Though I only made it to third year, where I started making my first website with React, me and a friend made a CLI RPG as a final project where I got face to face with Python and actually experienced what it's like sitting for hours just making logic for additional functionalities.",
+            "utnsanrafa": "<div class='education-title'>Universidad Tecnológica Nacional — University Technical Degree in Programming (Ongoing)</div>Currently on first year practicing Python, Java and Javascript as well as making this web portfolio. At the end of each semester we do a final project involving everything we learned up until that point. We've also gone over everything previously mentioned (programming concepts and exercises), so I was able to get back in the saddle pretty quickly."
         }
     }
 }

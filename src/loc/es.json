@@ -5,10 +5,20 @@
     "nav": {
         "about": "Sobre mí",
         "projects": "Proyectos",
-        "experience": "Experiencia",
+        "education": "Estudios",
         "contact": "Contacto"
     },
     "main": {
-        "about": "Placeholder"
+        "about": "<div class='about-intro-text'>Un chico curioso que profundiza en el tema cuando le agarra la mano</div>Hola, soy Manu. Técnico en programación a quién le gusta mucho Python. Me gusta trabajar en proyectos de cualquier escala y sobre todo ver los resultados: un programa eficaz y eficiente que cumple con su tarea. Una vez que agarro confianza me apunto a todo.\n\nEmpecé a ver programación en la secundaria, mayormente a través de mods para videojuegos, scripts de Windows y trabajos de Informática. En 2022 me anoté en Ingeniería en Informática, subiendo el nivel. Desde entonces he estado practicando con Lua, Python y Bash de forma recreativa (normalmente agarrando código existente, leyéndolo, y modificándolo según mi propósito).\n\nEn mi tiempo libre escucho mucha música (mayormente soundtracks de juegos, EDM y nu metal), juego y modeo (mi favorito es PAYDAY 2 y todos los juegos Source), leo manga y a veces me miro devuelta pelis viejas.",
+        "projects": {
+            "skyfall": "<div class='project-title'>PROJECT SKYFALL</div>Un trabajo integrador de 2023 cuando todavía estaba en ingeniería. Es un RPG de consola hecho en Python, el cual hace uso de POO y constantes. En el juego uno puede elegir una clase y punto de aparición, pelear, invertir puntos de experiencia y ver/usar items en el inventario. Tenía planeado incluir diálogo, historia y tienda de items, pero no alcanzó el tiempo. Aquí experimenté por primera vez el \"crunch\", aprendiendo mucho a los golpes.",
+            "webportfolio": "<div class='project-title'>PORTAFOLIO WEB</div>Usted está aquí! Un resumen gráfico de mí y mis habilidades. Éste fue victima de la sobrerefactorización, sobre todo cuando le empecé a hacer retoques visuales",
+            "comingsoon": "<div class='project-title'>PRÓXIMAMENTE...</div>Por ahora seguimos haciendo trabajos para la técnicatura, iré agregando más proyectos conforme nuestro equipo termine nuevos trabajos"
+        },
+        "education" : {
+            "highschool": "<div class='education-title'>I.F.D. N°6 — Secundaria (Terminado)</div>Aquí aprendí las bases del desarrollo web. Vimos lo que son las tags, el index y las stylesheets de css (pero no Javascript). También vimos un poco de Access y apredimos conceptos como tablas, filas, columnas y llaves primarias.",
+            "unimendoza": "<div class='education-title'>Universidad de Mendoza — Ingeniería en Informática (Abandonado)</div>Aquí aprendí prácticamente todo lo que sé. Vimos desde juegos simples en Scratch hasta la POO, el frontend y el backend. Los cuatro pilares, variables, contenedores, funciones, clases, métodos, atributos, etc. Si bien solo llegué hasta tercer año, donde hice mi primer sitio web con React, yo y un amigo hicimos el RPG anteriormente mencionado como proyecto final, en el que estuve mano a mano con Python y experimenté lo que es estar sentado por horas haciendo lógica para añadir nuevas funcionalidades.",
+            "utnsanrafa": "<div class='education-title'>Universidad Tecnológica Nacional — Técnicatura Universitaria en Programación (Cursando)</div>Ahora mismo estoy en mi primer año practicando Python, Java y Javascript, al igual que el desarrollo de ésta página. Al final de cada semestre hacemos un trabajo integrador donde empleamos todo lo visto en las clases. Además también vimos todo lo anteriormente mencionado (conceptos y ejercicios de programación), fue un buen pantallazo para refrescar mi memoria."
+        }
     }
 }

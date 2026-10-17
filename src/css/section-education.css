@@ -1,4 +1,4 @@
-#experience {
+#education {
 	margin-top: 3rem;
 	border-style: solid;
 	border-left-width: 0;
@@ -14,35 +14,35 @@
 		1;
 }
 
-#experience h2 {
+#education h2 {
     margin-bottom: 2rem;
 }
 
-#experience .section-content {
+#education .section-content {
 	display: grid;
     grid-template-columns: minmax(0, 1fr);
     gap: 3rem;
 }
 
-.experience-article {
+.education-article {
 	display: flex;
 	gap: 2rem;
     justify-content: center;
 }
 
-.experience-article img {
+.education-article img {
 	height: 128px;
 	width: 128px;
 }
 
-.experience-article p {
+.education-article p {
 	min-width: 0;
     width: 70%;
     margin: 0;
 	overflow-wrap: break-word;
 }
 
-.experience-title {
+.education-title {
 	font-family: "Courier Prime", monospace;
 	font-size: 1.5rem;
 	font-weight: 600;
@@ -50,7 +50,7 @@
 }
 
 @media (max-width: 768px) {
-    .experience-article {
+    .education-article {
         display: grid;
         grid-template-columns: minmax(0, 1fr);
         gap: 1.5rem;
@@ -58,12 +58,12 @@
     }
 
     
-    .experience-article p {
+    .education-article p {
         width: 100%;
         text-align: justify;
     }
 
-    .experience-title {
+    .education-title {
         text-align: center;
     }
 }

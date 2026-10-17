@@ -56,15 +56,19 @@
     <link rel="stylesheet" href="src/css/section.css">
     <link rel="stylesheet" href="src/css/section-about.css">
     <link rel="stylesheet" href="src/css/section-project.css">
-    <link rel="stylesheet" href="src/css/section-experience.css">
+    <link rel="stylesheet" href="src/css/section-education.css">
     <link rel="stylesheet" href="src/css/section-contact.css">
 </head>
 <body>
     <div class="bg-gradient-container"></div>
     <header>
         <div class="logo-identity">
-            <img src="src/assets/nan.png" alt="Logo">
-            <div class="logo-identity-title">
+            <!-- <img src="src/assets/nan.png" alt="Logo"> -->
+            <a href="index.html" class="logo" aria-label="Home">
+                <img src="src/assets/identitylogo-light.png" alt="Logo initials" class="logo-light">
+                <img src="src/assets/identitylogo-dark.png" alt="Logo initials" class="logo-dark">
+            </a>
+            <div class="identity-title">
                 <h1>Alejandro Manuel Monsalve</h1>
                 <p data-i18n="head.profession"></p>
             </div>
@@ -74,7 +78,7 @@
                 <div class="nav-anchors">
                     <a href="#about" data-i18n="nav.about"></a>
                     <a href="#projects" data-i18n="nav.projects"></a>
-                    <a href="#experience" data-i18n="nav.experience"></a>
+                    <a href="#education" data-i18n="nav.education"></a>
                     <a href="#contact" data-i18n="nav.contact"></a>
                 </div>
                 <div class="nav-acc-buttons">
@@ -143,21 +147,21 @@
             </div>
         </section>
 
-        <section id="experience">
-            <h2 data-i18n="nav.experience"></h2>
+        <section id="education">
+            <h2 data-i18n="nav.education"></h2>
 
             <div class="section-content">
-                <article class="experience-article">
+                <article class="education-article">
                     <img src="src/assets/ifd6.png" alt="High school">
-                    <p data-i18n="main.experience.highschool" data-i18n-html></p>
+                    <p data-i18n="main.education.highschool" data-i18n-html></p>
                 </article>
-                <article class="experience-article">
+                <article class="education-article">
                     <img src="src/assets/unimendoza.png" alt="First Uni">
-                    <p data-i18n="main.experience.unimendoza" data-i18n-html></p>
+                    <p data-i18n="main.education.unimendoza" data-i18n-html></p>
                 </article>
-                <article class="experience-article">
+                <article class="education-article">
                     <img src="src/assets/utnsanrafa.png" alt="Second Uni">
-                    <p data-i18n="main.experience.utnsanrafa" data-i18n-html></p>
+                    <p data-i18n="main.education.utnsanrafa" data-i18n-html></p>
                 </article>
             </div>
         </section>
