@@ -4,6 +4,3 @@ node_modules
 biome.json
 GUIDE.md
 .vscode
-*.png
-*.jpg
-*.ico
